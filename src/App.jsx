@@ -8,8 +8,22 @@ class IssueFilter extends React.Component {
 }
 class IssueTable extends React.Component {
     render() {
+        const borderedStyle = { border: "1px solid silver", padding: 6 };
         return (
-            <div>This is a placeholder for a table of Issues.</div>
+            <table style={{ borderCollapse: "collapse" }}>
+                <thead>
+                    <tr>
+                        <th style={borderedStyle}>Id</th>
+                        <th style={borderedStyle}>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <IssueRow issue_id={1}
+                        issue_title="Error in console when clicking Add" />
+                    <IssueRow issue_id={2}
+                        issue_title="Missing bottom border on panel" />
+                </tbody>
+            </table>
         )
     }
 }
@@ -35,4 +49,24 @@ class IssueList extends React.Component {
         );
     }
 }
+
+class IssueRow extends React.Component {
+    render() {
+        const borderedStyle = { border: "1px solid silver", padding: 4 };
+        return (
+            <tr>
+                <td style={borderedStyle}>{this.props.issue_id}</td>
+                <td style={borderedStyle}>{this.props.issue_title}</td>
+            </tr>
+        )
+    }
+
+    static get propTypes() {
+        return {
+            issue_id: React.PropTypes.number.isRequired,
+            issue_title: React.PropTypes.string
+        };
+    }
+}
+
 ReactDOM.render(<IssueList />, contentNode);
