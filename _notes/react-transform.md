@@ -9,7 +9,7 @@
     or use npm script
     "scripts": {
         "compile": "babel src --presets react --out-dir static",
-        "watch": "babel src --presets react --out-dir static –watch",
+        "watch": "babel src --presets react --out-dir static --watch",
         "test": "echo \"Error: no test specified\" && exit 1"
     }
     $ npm run compile

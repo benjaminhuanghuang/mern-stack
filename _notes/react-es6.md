@@ -15,3 +15,6 @@
     If you must support those browsers and want to use these built-in functions, you need
     to add support to the browser via a JavaScript library. These are called polyfills, things that
     supplement browser capabilities or global functions.
+
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.13.0/polyfill.js">
+    </script>
