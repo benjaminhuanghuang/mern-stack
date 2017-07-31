@@ -9,6 +9,7 @@ class IssueFilter extends React.Component {
 
 ## Passing data
     You can pass data from a parent to a child component in different ways.
+    
 ### Properties
     We accessed the properties using this.props in the child component:
         <td style={borderedStyle}> {this.props.issue_id} </td>
